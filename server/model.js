@@ -25,17 +25,17 @@ const models = {
   },
   blog: {
     value: { type: String, require: true },
-    nickname: { type: String, require: true },
     author: { type: String, require: true },
-    avatar: { type: String, require: true },
-    source: { type: String },
+    source: { type: Array },
+    source_info: { type: Object },
     cited: { type: Array },
     cited_num: { type: Number },
     comment: { type: Array },
     comment_num: { type: Number },
     mentions: { type: Array },
     create_time: { type: Number, default: new Date().getTime() },
-    like: { type: Array }
+    like: { type: Array },
+    type: { type: String }
   }
 };
 

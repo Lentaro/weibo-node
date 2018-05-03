@@ -14,6 +14,7 @@ const User = Model.getModel("user");
 // 屏蔽密码和版本号的返回
 const _filter = { password: 0, __v: 0, username: 0 };
 
+// User.remove({}, function(err, doc) {});
 Router.get("/list", function(req, res) {
   // const { type } = req.query;
   User.find({}, function(err, doc) {
